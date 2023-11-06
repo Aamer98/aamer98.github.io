@@ -245,8 +245,7 @@
             guide the policy's generation of treatment dosages.
           </p>
           <p>To enable clinicians to provide more detailed inputs, we break down the SAPS2 score into 
-            constituent scores that correspond to specific organ systems. Following 
-            the definitions provided in ~\cite{Schlapbach22}, we define split scores 
+            constituent scores that correspond to specific organ systems. We define the split scores 
             \[k = (k_c, k_r, k_n, k_l, k_h, k_m, k_o)\] to represent the status of the cardiovascular, 
             respiratory, neurological, renal, hepatic, haematologic and other systems, respectively. 
             This enhances the usability of the model for clinicians, enabling efficient interaction with the 
@@ -287,11 +286,10 @@
 
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Dosage Distribution</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            The learnt MeDT policy learns to recommend dosages similar to that of clinicians.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -300,11 +298,10 @@
         <!--/ Re-rendering. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Patient Outcomes</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Dosages output by MeDT lead to better estimated outcomes than baselines.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -313,11 +310,10 @@
         <!--/ Re-rendering. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-4">Patient Rollout</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            MeDT leads to more stable patient rollouts than DT.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -330,19 +326,6 @@
     <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">References</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            [1]
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
@@ -351,42 +334,29 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@inproceedings{rahman2023empowering,
+    title={Empowering Clinicians with Me{DT}: A Framework for Sepsis Treatment},
+    author={Abdul Rahman, Aamer and Agarwal, Pranav and Michalski, Vincent and Noumeir, Rita and Jouvet, Philippe and 
+      Ebrahimi-Kahou, Samira},
+    booktitle={NeurIPS 2023 Workshop on Goal-Conditioned Reinforcement Learning},
+    year={2023}
+    }
+</code></pre>
   </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+          <div class="content has-text-centered">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Website template is borrowed from <a rel="license"
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
           </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+          </div>
         </div>
       </div>
     </div>
