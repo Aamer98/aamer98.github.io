@@ -153,6 +153,9 @@
         <div class="content has-text-centered">
           <img src="static\images\meDT_eval.png" alt="MeDT" width="600">
         </div>
+        <h4 class="subtitle has-text-centered">
+          Architecture and pipeline of MeDT.
+        </h4>
     </div>
   </div>
 </section>
@@ -208,8 +211,7 @@
         <div class="content has-text-justified">
           <p>
             Recent research in RL is shifting towards attention-based networks like transformers 
-            which can effectively model long contexts and can be trained in a parallelizable manner, 
-            countering most of the challenges of RNN. Chen et al. proposed the Decision Transformer (DT), 
+            which counter many challenges of RNNs. Chen et al. proposed the Decision Transformer (DT), 
             a transformer based RL policy learning model that has proven effective for offline RL. DT 
             addresses the problem of sparse or distracting rewards by leveraging self-attention for credit 
             assignment, which incorporates contextual information into the learning process.  Furthermore, 
@@ -232,21 +234,18 @@
         <h2 class="title is-3">Medical Decision Transformer</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we propose MeDT, where we model our trajectories such that the transformer 
+            We model our trajectories such that the transformer 
             conditions on future desired returns to generate treatment dosages. Specifically, we use 
             returns-to-go \[r_t=\sum_{t^{\prime}=t}^T R_{t^{\prime}},\]which represents patient death or 
             survival status, to condition the model. In addition, we propose to condition MeDT 
             on future patient acuity scores (SAPS2), or acuity-to-go, where the acuity score provides an 
             indication of the severity of illness of the patient in the ICU, based on the status of the 
-            patient's physiological systems. This formulation allows clinicians to input desired acuity 
-            scores for the next state upon monitoring the current physiological state of the patient, 
-            providing additional context for the policy to generate optimal actions. This leads to 
+            patient's physiological systems. This leads to 
             more information-dense conditioning, allowing clinicians to interact with the model and 
             guide the policy's generation of treatment dosages.
           </p>
-          <p>To enable clinicians to provide more detailed inputs, we break down the SAPS2 score into 
-            constituent scores that correspond to specific organ systems. We define the split scores 
-            \[k = (k_c, k_r, k_n, k_l, k_h, k_m, k_o)\] to represent the status of the cardiovascular, 
+          <p>The acuity scores are split to represent different physiological systems, defined as 
+            \[k = (k_c, k_r, k_n, k_l, k_h, k_m, k_o)\] which represent the status of the cardiovascular, 
             respiratory, neurological, renal, hepatic, haematologic and other systems, respectively. 
             This enhances the usability of the model for clinicians, enabling efficient interaction with the 
             model for future dosage recommendations, considering the current state of the patient's organs.
