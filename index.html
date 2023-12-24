@@ -34,7 +34,7 @@
               </p>
               <p style="color:rgba(255,0,0,1);">Actively looking for ML internship roles for summer 2024.
               </p>
-              <p>I am a Masters student at <a href="https://mila.quebec/en/person/aamer-abdul-rahman/">Mila Quebec</a> where I am advised by Professor <a href="https://saebrahimi.github.io/">Samira Ebrahimi Kahou</a>, Professor <a href="https://www.etsmtl.ca/en/research/professors/rnoumeir/">Rita Noumeir</a> and <a href="https://recherche.umontreal.ca/english/our-researchers/professors-directory/researcher/is/in15318/">Dr. Philippe Jouvet</a>. Additionally, I collaborate with CHU Sainte-Justine hospital as a graduate researcher. My research is broadly in machine learning and its applications to healthcare. In particular, I work on treatment effect estimation and the application of offline reinforcement learning to safety-critical environments such as healthcare. 
+              <p>I am a Masters student at <a href="https://mila.quebec/en/person/aamer-abdul-rahman/">Mila Quebec</a> where I am advised by Professor <a href="https://saebrahimi.github.io/">Samira Ebrahimi Kahou</a>, Professor <a href="https://www.etsmtl.ca/en/research/professors/rnoumeir/">Rita Noumeir</a> and <a href="https://recherche.umontreal.ca/english/our-researchers/professors-directory/researcher/is/in15318/">Dr. Philippe Jouvet</a>. Additionally, I collaborate with CHU Sainte-Justine hospital as a graduate researcher. My research is broadly in computer vision, machine learning and its applications to healthcare. In particular, I work on self supervised learning for videos and the application of offline reinforcement learning to safety-critical environments such as healthcare. 
               </p>
               <p>Previously, I was a Research Intern at the <a href="https://www.utoronto.ca/">University of Toronto</a>, working under the supervision of Professor <a href="https://cglee.mie.utoronto.ca/">Chi-Guhn Lee</a>, where I worked on adversarial domain adaptation for data-sparse image classification. My undergrad was in Electronics and Communication Engineering from BITS Pilani, during which I mainly worked on computer vision and machine listening. 
               </p>
@@ -58,7 +58,7 @@
             <td width="100%" valign="middle">
               <heading id="interests">News</heading>
                 <ul>
-                  <li><b>October 2023</b>: <b>Spotlight Paper @ NeurIPS Workshop</b> - Our work <a href="aamer98.github.io">Empowering Clinicians with MeDT: A Framework for Sepsis Treatment</a> was accepted at NeurIPS 2023 Workshop on Goal-Conditioned Reinforcement Learning.</li>
+                  <li><b>October 2023</b>: <b><font color="red">Spotlight Paper</font> @ NeurIPS Workshop</b> - Our work <a href="aamer98.github.io">Empowering Clinicians with MeDT: A Framework for Sepsis Treatment</a> was accepted at NeurIPS 2023 Workshop on Goal-Conditioned Reinforcement Learning.</li>
                   <li><b>July 2023</b>: <b>Paper @ Preprint release</b> - Preprint release of our work Transformers in <a href="https://arxiv.org/abs/2307.05979">Reinforcement Learning: A Survey</a>.</li>
                   <li><b>May 2023</b>: <b>Reviewer</b> - Served as reviewer for <a href="https://iccv2023.thecvf.com/">ICCV</a>.</li> 
                   <li><b>November 2022</b>: <b>Paper @ NeurIPS Workshop</b> - Our work <a href="https://openreview.net/pdf?id=WVe3vok8Cc3">Learning from Uncertain Concepts via Test Time Interventions</a> was accepted at NeurIPS 2022 Workshop on Trustworthy and Socially Responsible Machine Learning.</li>
@@ -123,6 +123,46 @@
           <tr onmouseout="porlight_stop()" onmouseover="porlight_start()" >
             <td width="25%">
                 <div class="one">
+                  <div class="two" id='mpi_image'><img src='images/medt_eval_gif_title.gif' width="180"></div>
+                  <img src='images/medt_eval_gif_title.gif' width="180">
+                </div>
+                <script type="text/javascript">
+                  function mpi_start() {
+                    document.getElementById('mpi_image').style.opacity = "1";
+                  }
+
+                  function mpi_stop() {
+                    document.getElementById('mpi_image').style.opacity = "0";
+                  }
+                  mpi_stop()
+                </script>
+              </td>
+            <td valign="middle" width="75%">
+              
+                <papertitle><a href="https://aamer98.github.io/medical_decision_transformer/">Empowering Clinicians with MeDT: A Framework for Sepsis Treatment</a></papertitle>       
+              <br>
+              <strong>Aamer Abdul Rahman</strong>,
+              <a href="https://pranaval.github.io/">Pranav Agarwal</a>,              
+              <a href="https://vmichals.github.io/">Vincent Michalski</a>,
+              <a href="https://www.etsmtl.ca/en/research/professors/rnoumeir/"> Rita Noumeir</a>,
+              <a href="https://recherche.umontreal.ca/english/our-researchers/professors-directory/researcher/is/in15318/"> Philippe Jouvet</a>,
+              <a href="https://saebrahimi.github.io/">Samira Ebrahimi Kahou</a>
+              <br>
+
+
+              <em>NeurIPS 2023 Goal-Conditioned Reinforcement Learning Workshop (<font color="red"><b>Spotlight</b></font>)</em>
+              <br>
+              <br>
+              <a href="https://aamer98.github.io/medical_decision_transformer/">Project page</a> /
+              <a href="https://aamer98.github.io/">Paper</a> / 
+              <a href="https://github.com/Aamer98/MeDT">Code</a>
+              <p></p>
+              <p> Offline reinforcement learning is promising for safety-critical tasks like clinical decision support, but faces challenges of interpretability and clinician interactivity. To overcome these, the proposed Medical Decision Transformer (MeDT) utilizes a goal-conditioned RL paradigm for sepsis treatment recommendations. MeDT employs the decision transformer architecture, considering factors like treatment outcomes, patient acuity scores, dosages, and current/past medical states to provide a holistic view of the patient's history. This enhances decision-making by allowing MeDT to generate actions based on user-specified goals, ensuring clinician interactability and addressing sparse rewards. Results from the MIMIC-III dataset demonstrate MeDT's effectiveness in producing interventions that either outperform or compete with existing methods, offering a more interpretable, personalized, and clinician-directed approach. </p>
+            </td>
+          </tr>
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()" >
+            <td width="25%">
+                <div class="one">
                   <div class="two" id='mpi_image'><img src='images/tRL_survey.png' width="180"></div>
                   <img src='images/tRL_survey.png' width="180">
                 </div>
@@ -154,8 +194,7 @@
               <em>Arxiv Preprint</em>, 2023
               <br>
               <br>
-              Project page /
-              arxiv
+              <a href="https://arxiv.org/pdf/2307.05979.pdf">Paper</a>
               <p></p>
               <p> We present a comprehensive survey on the emergence of transformers in reinforcement learning. </p>
             </td>
